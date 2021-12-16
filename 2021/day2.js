@@ -15,6 +15,7 @@ const part1 = (array) => {
 }
 console.log(part1(data));
 
+
 /** PART 2 */
 const part2 = (array) => {
     let map = { depth: 0, horizontal: 0, aim: 0 };
