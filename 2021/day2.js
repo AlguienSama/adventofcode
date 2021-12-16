@@ -21,13 +21,10 @@ const part2 = (array) => {
     array.forEach((v) => { 
         if (v.pos === 'forward') {
             map.horizontal += v.val;
-            if (map.aim !== 0) {
-                map.depth += v.val * map.aim
-            }
+            if (map.aim !== 0) { map.depth += v.val * map.aim }
         } else if (v.pos === 'down') { map.aim += v.val }
         else if (v.pos === 'up') { map.aim -= v.val }
     });
-    console.log(map);
     return map.depth * map.horizontal;
 }
 console.log(part2(data));
